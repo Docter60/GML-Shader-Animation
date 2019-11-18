@@ -18,7 +18,7 @@ void main()
 {
     vec4 trans_pos = vec4(in_Position.xyz, 1.0);
     
-    float wind = (1.0 + sin((u_delta + in_Position.x) / u_wavelength)) * u_amplitude;
+    float wind = -(1.0 + sin((u_delta + in_Position.x) / u_wavelength)) * u_amplitude;
     
     trans_pos.x += smoothstep(0.0, 1.0, in_Weight / 2.0) * wind;
     trans_pos.y += smoothstep(0.0, 1.0, in_Weight / 2.0) * wind;

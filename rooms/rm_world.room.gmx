@@ -12,15 +12,19 @@
   <showcolour>-1</showcolour>
   <code>instance_create(0, 0, obj_world_controller);
 
-for(i = 3; i &lt; 32; ++i){
-    for(j = 2; j &lt; 58; ++j){
-        //if (i % 2 == 0){
-            //instance_create(j * 32, i * 32, obj_corn_vertex);
-        //} else {
+vertex_optimize = true;
+
+if(vertex_optimize){
+    // Optimized wheat placement
+    for(i = 3; i &lt; 32; ++i){
+        for(j = 2; j &lt; 58; ++j){
             instance_create(j * 32, i * 32, obj_wheat_vertex);
-        //}
+        }
     }
+} else {
+    // Unoptimized wheat placement
 }
+
 
 
 //create_new_world("0");</code>
