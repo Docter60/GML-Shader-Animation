@@ -12,17 +12,23 @@
   <showcolour>-1</showcolour>
   <code>instance_create(0, 0, obj_world_controller);
 
-vertex_optimize = true;
+sx = 56;
+sy = 29;
 
-if(vertex_optimize){
+if(obj_world_controller.vertex_optimize){
     // Optimized wheat placement
-    for(i = 3; i &lt; 32; ++i){
-        for(j = 2; j &lt; 58; ++j){
-            instance_create(j * 32, i * 32, obj_wheat_vertex);
+    for(i = 0; i &lt; sy; ++i){
+        for(j = 0; j &lt; sx; ++j){
+            instance_create((j + 2) * 32, (i + 3) * 32, obj_wheat_vertex);
         }
     }
 } else {
     // Unoptimized wheat placement
+    for(i = 0; i &lt; sy; ++i){
+        for(j = 0; j &lt; sx; ++j){
+            instance_create((j + 2) * 32, (i + 3) * 32, obj_wheat_vertex_u);
+        }
+    }
 }
 
 

@@ -34,14 +34,12 @@
       <objects name="Plant_Controllers">
         <object>objects\obj_corn_controller</object>
         <object>objects\obj_wheat_controller</object>
+        <object>objects\obj_wheat_controller_u</object>
       </objects>
       <objects name="Plant_Vertex_Buffer">
         <object>objects\obj_wheat_vertex</object>
+        <object>objects\obj_wheat_vertex_u</object>
         <object>objects\obj_corn_vertex</object>
-      </objects>
-      <objects name="Plant_Entity">
-        <object>objects\obj_corn</object>
-        <object>objects\obj_wheat</object>
       </objects>
     </objects>
     <object>objects\obj_world_controller</object>
